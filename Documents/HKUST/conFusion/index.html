@@ -49,18 +49,39 @@
                             </ul>
                          </li>
                         <li><a href="contactus.html"><i class="fa fa-envelope-o" area-hidden="true"></i> Contact</a></li>
+
                     </ul>
-                    <form class="navbar-form navbar-right">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a data-toggle="modal" data-target="#loginModal">
+                        <span class="glyphicon glyphicon-log-in"></span> Login</a>
+                        </li>
+                    </ul>
+                </div>   
+            </div>
+    </nav>
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Login </h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-inline">
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Email">
                             <input type="text" class="form-control" placeholder="Password">
                             <label for="remember" class="checkbox-inline"><input type="checkbox"><span style="color:white"> Remember Me</span></label>
                         </div>
                         <button type="submit" class="btn btn-info">Sign In</button>
-                    </form>
-                </div>   
+                        <button type="button" class="btn btn-default btn-sm"      data-dismiss="modal">Cancel</button>
+                </form>
             </div>
-    </nav> 
+        </div>
+        </div>
+    </div>
+ 
 
     <header class="jumbotron">
 
@@ -79,7 +100,9 @@
                 </div>
                 <div class="col-xs-12 col-sm-2">
                     <p style="padding:40px;"></p>
-                    <a href="#reservation" class="btn btn-warning btn-block">Reserve Table</a>
+                    <a type="button" class="btn btn-warning btn-block"
+                    data-toggle="tooltip" title="Or Call us at +852 12345678"
+                     data-placement="bottom" href="#reserveform">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -261,6 +284,11 @@
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+         });
+    </script>
 </body>
 
 </html>
